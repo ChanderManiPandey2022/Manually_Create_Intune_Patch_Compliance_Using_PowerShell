@@ -255,7 +255,7 @@ foreach ($device in $DevicesInfos) {
            "Win10-1703"} ElseIf ($OSVersion -eq "16299") {"Win10-1709"} ElseIf ($OSVersion -eq "17134") {"Win10-1803"} ElseIf ($OSVersion -eq "17763") {'Win10-1809'} ElseIf ($OSVersion -eq '18362') {
            "Win10-1903"} ElseIf ($OSVersion -eq "18363") {"Win10-1909"} ElseIf ($OSVersion -eq "19041") {"Win10-2004"} ElseIf ($OSVersion -eq "19042") {"Win10-20H2"} ElseIf ($OSVersion -eq "19043") {
            "Win10-21H1"} ElseIf ($OSVersion -eq "19044") {"Win10-21H2"} ElseIf ($OSVersion -eq "19045") {"Win10-22H2"} ElseIf ($OSVersion -eq "22000") {"Win11-21H2"} ElseIf ($OSVersion -eq "22621") {
-           "Win11-22H2"}ElseIf ($OSVersion -eq "0") {"0.0.0.0"}ElseIf ($OSVersion -eq "7601") {"Win7-Or-Server"}ElseIf ($OSVersion -eq $null) {"No OS version"}Else {$deviceOSVersion }
+           "Win11-22H2"} ElseIf ($OSVersion -eq "22631") {"Win11-23H2"} ElseIf ($OSVersion -eq "0") {"No OS version"}ElseIf ($OSVersion -eq "7601") {"Win7-Or-Server"}ElseIf ($OSVersion -eq $null) {"No OS version"}Else {$deviceOSVersion }
     $Ownership = $device.Ownership
     $LastcheckIn = $device."Last check-in"
     $JoinType = $device.JoinType
