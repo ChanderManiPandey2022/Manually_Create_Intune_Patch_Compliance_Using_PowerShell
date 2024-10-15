@@ -14,16 +14,16 @@ OUTPUTS
 <# 
 
 NOTES
-Version:         1.0
+Version:         1.1
 Author:          Chander Mani Pandey
 Creation Date:   4 Sep 2023
+Update Date :    15 Oct 2024 (Updated Windows 24h2 information)
 Find Author on 
 Youtube:-        https://www.youtube.com/@chandermanipandey8763
 Twitter:-        https://twitter.com/Mani_CMPandey
-Facebook:-       https://www.facebook.com/profile.php?id=100087275409143&mibextid=ZbWKwL
 LinkedIn:-       https://www.linkedin.com/in/chandermanipandey
 #>
-
+# 
 $error.clear() ## this is the clear error history 
 cls
 Set-ExecutionPolicy -ExecutionPolicy 'ByPass' -Scope 'Process' -Force -ErrorAction 'Stop' 
@@ -85,7 +85,7 @@ $buildInfoArray = @()
 #Creating working Folder
 
 # Add each Build and Operating System to the array
-"22631,Windows 11 23H2","22623,Windows 11 22H2","22621,Windows 11 22H2 B1","22471,Windows 11 21H2","22468,Windows 11 21H2 B6","22463,Windows 11 21H2 B5",
+"26100,Windows 11 24H2","22631,Windows 11 23H2","22623,Windows 11 22H2","22621,Windows 11 22H2 B1","22471,Windows 11 21H2","22468,Windows 11 21H2 B6","22463,Windows 11 21H2 B5",
 "22458,Windows 11 21H2 B4","22454,Windows 11 21H2 B3","22449,Windows 11 21H2 B2","22000,Windows 11 21H2 B1","21996,Windows 11 Dev",
 "19045,Windows 10 22H2","19044,Windows 10 21H2","19043,Windows 10 21H1","19042,Windows 10 20H2","19041,Windows 10 2004","19008,Windows 10 20H1",
 "18363,Windows 10 1909","18362,Windows 10 1903","17763,Windows 10 1809","17134,Windows 10 1803","16299,Windows 10 1709 FC","15254,Windows 10 1709",
@@ -255,7 +255,8 @@ foreach ($device in $DevicesInfos) {
            "Win10-1703"} ElseIf ($OSVersion -eq "16299") {"Win10-1709"} ElseIf ($OSVersion -eq "17134") {"Win10-1803"} ElseIf ($OSVersion -eq "17763") {'Win10-1809'} ElseIf ($OSVersion -eq '18362') {
            "Win10-1903"} ElseIf ($OSVersion -eq "18363") {"Win10-1909"} ElseIf ($OSVersion -eq "19041") {"Win10-2004"} ElseIf ($OSVersion -eq "19042") {"Win10-20H2"} ElseIf ($OSVersion -eq "19043") {
            "Win10-21H1"} ElseIf ($OSVersion -eq "19044") {"Win10-21H2"} ElseIf ($OSVersion -eq "19045") {"Win10-22H2"} ElseIf ($OSVersion -eq "22000") {"Win11-21H2"} ElseIf ($OSVersion -eq "22621") {
-           "Win11-22H2"} ElseIf ($OSVersion -eq "22631") {"Win11-23H2"} ElseIf ($OSVersion -eq "0") {"No OS version"}ElseIf ($OSVersion -eq "7601") {"Win7-Or-Server"}ElseIf ($OSVersion -eq $null) {"No OS version"}Else {$deviceOSVersion }
+           "Win11-22H2"} ElseIf ($OSVersion -eq "22631") {"Win11-23H2"} ElseIf ($OSVersion -eq "26100") {"Win11-24H2"} ElseIf ($OSVersion -eq "0") {"No OS version"}ElseIf ($OSVersion -eq "7601") {"Win7-Or-Server"}
+	   ElseIf ($OSVersion -eq $null) {"No OS version"}Else {$deviceOSVersion }
     $Ownership = $device.Ownership
     $LastcheckIn = $device."Last check-in"
     $JoinType = $device.JoinType
