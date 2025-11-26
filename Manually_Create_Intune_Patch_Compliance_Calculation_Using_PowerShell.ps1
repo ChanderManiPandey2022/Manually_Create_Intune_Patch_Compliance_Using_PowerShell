@@ -37,7 +37,7 @@ Write-Host ""
 #--------------------------------  User Input Section Start -----------------------------------------------------------------#
 
 
-$DeviceList = "C:\Users\PandeyCh\Downloads\D (2).csv" # Location of Intune Device data csv file
+$DeviceList = "C:\Users\CMP\Downloads\D (2).csv" # Location of Intune Device data csv file
 
 $WorkingFolder = "C:\TEMP\IntunePatchingReport" # Location where you want to create reporting folders
 
@@ -330,3 +330,4 @@ if (Test-Path $MergeOverallFile) {Remove-Item $MergeOverallFile}
 $endTime = Get-Date
 $duration = $endTime - $startTime
 Write-Host "Time duation to successfully excute this script is:- $duration (Hour:Min:Sec.Milisec)" -ForegroundColor Yellow
+
